@@ -1,0 +1,43 @@
+include header
+block content
+
+    .main.container
+        .row
+            .col-sm-12.col-md-6
+                .card.mb3
+                    .card-header View Ticket
+                    .card-body
+                        form
+                            hr
+                            div.form-group
+                                label(for='tNum') Ticket Number:
+                                #tnum.td= tNum
+                            hr
+                            div.form-group
+                                label(for='customer') Name:
+                                #customer.td= customer
+                            hr
+                            div.form-group
+                                label(for='problem') Problem:
+                                #problem.td=problem
+                            hr
+                            div.form-group
+                                label(for='category') Category:
+                                #category.td= category
+                            hr
+                            div.form-group
+                                label(for='fAction') Fix:
+                                #fAction.td= fAction
+                            hr
+                            div.form-group
+                                label(for='date') Date Opened:
+                                #date.td= date
+                            hr
+                            div.form-group
+                                label(for='status') Status
+                                #status.td= status
+                            hr
+
+                            a.btn.btn-outline-primary.btn-sm(style='margin: 5px', href='/tickets') Return to ticket queue
+                            a.btn.btn-outline-primary.btn-sm(style='margin: 5px', href='/edit/' + _id) Edit
+

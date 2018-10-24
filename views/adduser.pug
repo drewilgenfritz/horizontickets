@@ -1,0 +1,25 @@
+include header
+
+block content
+    .main.container
+        .row
+            .col-sm-12.col-md-6
+                .card.mb3
+                    .col-sm-12.col-md-6
+                    .card-body
+                        form(style= action='/users/adduser', method='post')
+                            h3.text-center(style='#8d8d8d') Create New User
+                            .form-group
+                                input.form-control.item(type='text', name='fname', placeholder='First Name')
+                            .form-group
+                                input.form-control.item(type='text', name='lname', placeholder='Last Name')
+                            .form-group
+                                input.form-control.item(type='text', name='username', placeholder='username')
+                            .form-group
+                                input#email.form-control.item(type='email', name='email', required='', placeholder='Email', inputmode='email')
+                            .form-group
+                                input#password.form-control.item(type='password', name='password', required='', minlength='6', placeholder='Password')
+                            .form-group
+                                input#password2.form-control.item(type='password', name='password2', required='', minlength='6', placeholder='Confirm Password')
+                            .form-group
+                                button.btn.btn-primary.btn-block.create-account(type='submit') Submit

@@ -1,0 +1,55 @@
+include header
+
+block content
+.main.container
+    .row
+        .col-sm-12.col-md-6
+            .card.mb3
+                .col-sm-12.col-md-6
+                .card-body
+                    form#form_add_ticket(name="addticket", method="post", action="/addticket")
+                        span Ticket Number
+                            span &nbsp;
+                            .form-group
+                            input.form-control.breadcrumb-item(type="text", placeholder="Ticket Number", name="tNum")
+                        br
+                        span Category
+                            span &nbsp;
+                            .form-group
+                                select#category.form-control(name='category')
+                                    option
+                                    option Software
+                                    option Hardware
+                                    option Printer
+                                    option FileServer
+                                    option Email
+                                    option Server
+                                    option Triconex
+
+                        br
+                        span Customer
+                        span &nbsp;
+                        .form-group
+                        input.form-control.breadcrumb-item(type="text", placeholder="Customer Name", name="customer")
+                        br
+                        span Problem
+
+                            span &nbsp;
+                            .form-group
+                            input.form-control.breadcrumb-item(type="text", placeholder="Enter Problem", name="problem")
+                        br
+                        span Status
+                        span &nbsp;
+                        .form-group
+                            select#role.form-control(name='status')
+                                option
+                                option Open
+                                option Closed
+                        br
+                        span Fix Action
+                            span &nbsp;
+                            .form-group
+                            input.form-control.breadcrumb-item(type="text", placeholder="Fix Action", name="fAction")
+                        br
+                        br
+                        button.btn.btn-primary.btn-block.create-account(type='submit') Save Ticket

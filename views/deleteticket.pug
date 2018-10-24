@@ -1,0 +1,8 @@
+include header
+
+block content
+    .registration-form
+        form(style= action = '/users/adduser', method='post')
+            h3.text-center Are you sure you want to delete?
+            .form-group
+                button.btn.btn-danger.btn-block.alert-danger(type='submit', style=style='background-color: #ddd69b;') Delete

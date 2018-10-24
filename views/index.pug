@@ -1,0 +1,72 @@
+include header
+
+block content
+head
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
+  link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
+  link(rel='stylesheet', href='stylesheets/fonts/ionicons.min.css')
+  link(rel='stylesheet', href='stylesheets/Footer-Basic.css')
+  link(rel='stylesheet', href='stylesheets/Navigation-Clean.css')
+  link(rel='stylesheet', href='stylesheets/styles.css')
+
+body
+  .container(style='padding-top: 30px;')
+
+
+    #carousel-1.carousel.slide(data-ride='carousel')
+      .carousel-inner(role='listbox')
+        .carousel-item.active
+          img.w-100.d-block(src='images/maxresdefault.jpg', alt='Slide Image')
+        |
+        .carousel-item
+          img.w-100.d-block(src='images/giphy.gif', alt='Slide Image')
+        |
+        .carousel-item
+          img.w-100.d-block(src='images/Computer-Coding-High-Definition-Wallpaper-24752.jpg', alt='Slide Image')
+      |
+      div
+        a.carousel-control-prev(href='#carousel-1', role='button', data-slide='prev')
+          span.carousel-control-prev-icon
+          span.sr-only Previous
+        a.carousel-control-next(href='#carousel-1', role='button', data-slide='next')
+          span.carousel-control-next-icon
+          span.sr-only Next
+      |
+      ol.carousel-indicators
+        li.active(data-target='#carousel-1', data-slide-to='0')
+        |
+        li(data-target='#carousel-1', data-slide-to='1')
+        |
+        li(data-target='#carousel-1', data-slide-to='2')
+    |
+    .footer-basic
+      footer
+        .social
+          a(href='#')
+            i.icon.ion-social-twitter
+          a(href='#')
+            i.icon.ion-social-facebook
+          a(href='#')
+            i.icon.ion-social-instagram
+        |
+        ul.list-inline
+          li.list-inline-item
+            a(href='#') Home
+          |
+          li.list-inline-item
+            a(href='#') Services
+          |
+          li.list-inline-item
+            a(href='#') About
+          |
+          li.list-inline-item
+            a(href='#') Terms
+          |
+          li.list-inline-item
+            a(href='#') Privacy Policy
+        |
+        p.copyright Horizon Consultants &copy; 2018
+    |
+
+

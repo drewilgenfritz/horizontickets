@@ -1,0 +1,33 @@
+include header
+
+block content
+    .dataTable_wrapper
+        .row
+            .col-sm-12.col-md-6
+            .col-sm-12.col-md-6
+        .row
+            .col-sm-12
+                .card.mb3
+                    .card-header Ticket Queue
+                    .card-body
+                        table.table.table-hover.table-responsive-sm.table-bordered
+                            thead
+                                tr
+                                    th Ticket Number
+                                    th Customer
+                                    th Category
+                                    th Status
+                                    th(colspan='2') Actions
+                            tbody
+                                each item in ticketlist
+                                    tr
+                                        td= item.tNum
+                                        td= item.customer
+                                        td= item.category
+                                        td= item.status
+                                        td
+
+                                            a.btn.btn-outline-primary.btn-sm(style='margin: 5px', href='/viewticket/' + item._id) Details
+                                            a.btn.btn-outline-primary.btn-sm(style='margin: 5px', href='/edit/' + item._id) Edit
+        .row
+            .col-sm-12.col-md-6
